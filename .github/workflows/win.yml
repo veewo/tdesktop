@@ -62,7 +62,7 @@ jobs:
       QT: "5_15_2"
       QT_VER: "5.15.2"
       OPENSSL_VER: "1_1_1"
-      UPLOAD_ARTIFACT: "false"
+      UPLOAD_ARTIFACT: "true"
       ONLY_CACHE: "false"
       MANUAL_CACHING: "2"
       DOC_PATH: "docs/building-msvc.md"
@@ -405,7 +405,8 @@ jobs:
           cd %REPO_NAME%\Telegram
 
           call configure.bat ^
-          -D TDESKTOP_API_TEST=ON ^
+          -D TDESKTOP_API_ID=2040 ^
+          -D TDESKTOP_API_HASH=b18441a1ff607e10a989891a5462e627 ^
           -D DESKTOP_APP_USE_PACKAGED=OFF ^
           -D DESKTOP_APP_DISABLE_CRASH_REPORTS=OFF ^
           %TDESKTOP_BUILD_DEFINE% ^
